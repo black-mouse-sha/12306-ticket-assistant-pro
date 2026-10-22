@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12306 抢票助手 Pro v3.3.5 · 架构图集</title>
+<meta name="description" content="12306 抢票助手 Pro 的六张交互式架构图：架构总览、三步流程、下单时序、运行状态机、数据流、模块树。">
+<style>
+  :root{
+    --bg:#0f1216; --panel:#171c23; --line:#2a3340; --ink:#e8edf4; --muted:#9aa8ba;
+    --accent:#4aa8ff; --accent2:#43d19e;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f5f7fa; --panel:#ffffff; --line:#dfe5ee; --ink:#141a22; --muted:#5b6878; --accent:#0b6fd4; --accent2:#0f8a63; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.65 "Segoe UI","Microsoft YaHei",system-ui,-apple-system,sans-serif;}
+  header{padding:40px 32px 8px;max-width:1180px;margin:0 auto}
+  h1{margin:0 0 6px;font-size:26px;letter-spacing:.3px}
+  .sub{color:var(--muted);margin:0 0 4px}
+  .meta{color:var(--muted);font-size:13px;margin:14px 0 0}
+  .meta code{background:var(--panel);border:1px solid var(--line);padding:1px 6px;border-radius:5px;font-size:12px}
+  .nav{margin:18px 0 0;display:flex;gap:10px;flex-wrap:wrap}
+  .nav a{display:inline-block;text-decoration:none;color:var(--ink);background:var(--panel);
+         border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px}
+  .nav a:hover{border-color:var(--accent);color:var(--accent)}
+  main{max-width:1180px;margin:0 auto;padding:24px 32px 56px;display:grid;
+       grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+  .card{display:block;text-decoration:none;color:inherit;background:var(--panel);
+        border:1px solid var(--line);border-radius:14px;padding:20px 20px 16px;
+        transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+  .card:hover{transform:translateY(-2px);border-color:var(--accent);
+              box-shadow:0 10px 26px rgba(0,0,0,.22)}
+  .tag{display:inline-block;font-size:11px;letter-spacing:.8px;text-transform:uppercase;
+       color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:1px 9px;margin-bottom:10px}
+  h2{margin:0 0 8px;font-size:18px}
+  .plain{margin:0 0 10px;color:var(--ink)}
+  .note{margin:0 0 14px;color:var(--muted);font-size:13px;border-left:2px solid var(--line);padding-left:10px}
+  .go{color:var(--accent);font-size:13px}
+  footer{max-width:1180px;margin:0 auto;padding:0 32px 48px;color:var(--muted);font-size:13px}
+  footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+  <h1>12306 抢票助手 Pro · 架构图集</h1>
+  <p class="sub">六张图，从「它由什么组成」到「它什么时候肯快、什么时候必须慢」。</p>
+  <p class="meta">源文件 <code>12306-ticket-assistant-pro.user.js</code>（v3.3.5）· 图中每个节点都标了源码行号，与仓库里的脚本逐行对应。</p>
+  <p class="nav">
+    <a href="https://github.com/black-mouse-sha/12306-ticket-assistant-pro">← 返回 GitHub 仓库</a>
+    <a href="https://github.com/black-mouse-sha/12306-ticket-assistant-pro/blob/main/docs/USAGE.md">完整使用手册</a>
+    <a href="https://github.com/black-mouse-sha/12306-ticket-assistant-pro/blob/main/docs/ARCHITECTURE.md">架构与实现说明</a>
+  </p>
+</header>
+<main>
+  <a class="card" href="diagrams/architecture-12306-grab-architecture-20261019-144638/12306-grab-architecture.html">
+    <div class="tag">architecture</div>
+    <h2>架构总览</h2>
+    <p class="plain">这套脚本由什么组成：页面世界、油猴扩展世界、12306 服务端三段边界。</p>
+    <p class="note">看图先看边界的颜色：同源走 fetch、跨域直走 GM 通道，是后续一切报错的根因所在。</p>
+    <span class="go">打开图 →</span>
+  </a>
+  <a class="card" href="diagrams/workflow-12306-grab-three-steps-20261019-144638/12306-grab-three-steps.html">
+    <div class="tag">workflow</div>
+    <h2>三步操作流程</h2>
+    <p class="plain">填条件 → 看方案 → 按顺序抢，每一步脚本在背后做什么。</p>
+    <p class="note">分支最多的那张：未登录、无票、起售未到、下单被拒都在这里分叉。</p>
+    <span class="go">打开图 →</span>
+  </a>
+  <a class="card" href="diagrams/sequence-12306-order-five-steps-20261019-144638/12306-order-five-steps.html">
+    <div class="tag">sequence</div>
+    <h2>下单 5 步时序</h2>
+    <p class="plain">一次下单从提交订单请求到确认排队、再去支付的完整往返。</p>
+    <p class="note">看失败分支：第 1 步和 token 提取是 12306 改版最先炸的位置。</p>
+    <span class="go">打开图 →</span>
+  </a>
+  <a class="card" href="diagrams/lifecycle-12306-grab-runtime-states-20261019-144638/12306-grab-runtime-states.html">
+    <div class="tag">lifecycle</div>
+    <h2>抢票运行态状态机</h2>
+    <p class="plain">脚本在等起售、热窗口、捡漏、接力之间怎么切换。</p>
+    <p class="note">主线是「什么条件才肯快、什么时候必须慢」——退避与熔断都在这里。</p>
+    <span class="go">打开图 →</span>
+  </a>
+  <a class="card" href="diagrams/dataflow-12306-grab-ticket-dataflow-20261019-144638/12306-grab-ticket-dataflow.html">
+    <div class="tag">dataflow</div>
+    <h2>余票到车票的数据流</h2>
+    <p class="plain">查询响应怎么被切成分段、变成方案、变成下单参数，最后落盘认领。</p>
+    <p class="note">三个真实改写点最值得看：parts[13] 日期覆盖、无座码置换、票价两种格式。</p>
+    <span class="go">打开图 →</span>
+  </a>
+  <a class="card" href="diagrams/tree-12306-grab-modules-20261019-144638/12306-grab-modules.html">
+    <div class="tag">tree</div>
+    <h2>模块能力树</h2>
+    <p class="plain">五个模块各自具备哪些能力，一眼看全。</p>
+    <p class="note">改版排查时的索引页：先在这棵树里定位到模块，再去读代码。</p>
+    <span class="go">打开图 →</span>
+  </a>
+</main>
+<footer>
+  <p>全部图为自包含 HTML，可离线打开；图中节点与连线的技术名词均来自源文件。</p>
+  <p>以 Archify 3.2.0 重新渲染（2026-10-19），六张图均通过 validate / deliver / check / browser-check 四道门禁；仅经自动化检查，未做人工视觉复看。</p>
+  <p>项目：<a href="https://github.com/black-mouse-sha/12306-ticket-assistant-pro">black-mouse-sha/12306-ticket-assistant-pro</a> · MIT License</p>
+</footer>
+</body>
+</html>
