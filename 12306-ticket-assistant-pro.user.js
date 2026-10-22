@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         12306 抢票助手 Pro
 // @namespace    https://github.com/black-mouse-sha/12306-ticket-assistant-pro
-// @icon         https://raw.githubusercontent.com/black-mouse-sha/12306-ticket-assistant-pro/main/docs/images/icon.png
+// @icon         https://black-mouse-sha.github.io/12306-ticket-assistant-pro/docs/images/icon.png
 // @version      3.3.5
 // @description  三步抢票：填条件 → 看方案 → 按顺序抢。支持直达 / 买长乘短 / 中转三类方案、按各站起售时间分段开火、中转分段接力、车厢图选座。
 // @author       LittlePerson

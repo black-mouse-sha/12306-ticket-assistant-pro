@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/black-mouse-sha/12306-ticket-assistant-pro/main/12306-ticket-assistant-pro.user.js"><img src="https://img.shields.io/badge/%E2%9A%A1%20%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85-3.3.5-2f6fed?style=for-the-badge" alt="一键安装"></a>
+  <a href="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/12306-ticket-assistant-pro.user.js"><img src="https://img.shields.io/badge/%E2%9A%A1%20%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85-3.3.5-2f6fed?style=for-the-badge" alt="一键安装"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-43d19e?style=for-the-badge" alt="MIT License"></a>
   <a href="https://www.tampermonkey.net/"><img src="https://img.shields.io/badge/Tampermonkey-%E6%B2%B9%E7%8C%B4-orange?style=for-the-badge" alt="Tampermonkey"></a>
 </p>
@@ -51,9 +51,12 @@ Chrome / Edge / Firefox 都支持。
 
 **点这里一键安装**：
 
-**<https://raw.githubusercontent.com/black-mouse-sha/12306-ticket-assistant-pro/main/12306-ticket-assistant-pro.user.js>**
+**<https://black-mouse-sha.github.io/12306-ticket-assistant-pro/12306-ticket-assistant-pro.user.js>**
 
 油猴会弹出安装页，点「安装」即可。
+
+> 这个链接由 GitHub Pages 提供，国内网络一般可以直接打开。
+> 如果打不开，打开 [GitHub 文件页](https://github.com/black-mouse-sha/12306-ticket-assistant-pro/blob/main/12306-ticket-assistant-pro.user.js)，点右上角的 **Raw** 按钮。
 
 <details>
 <summary>如果点击没有反应 / 想手动安装</summary>
@@ -192,6 +195,7 @@ https://kyfw.12306.cn/otn/leftTicket/init
 ```text
 .
 ├─ 12306-ticket-assistant-pro.user.js   # 全部逻辑：单文件、无构建、无依赖
+├─ index.html                            # GitHub Pages 入口：安装按钮 + 架构图
 ├─ README.md                             # 你正在看的快速上手
 ├─ CHANGELOG.md                          # 版本与改动记录
 ├─ LICENSE                               # MIT
@@ -199,7 +203,6 @@ https://kyfw.12306.cn/otn/leftTicket/init
    ├─ USAGE.md                           # 完整使用手册（每个按钮、每条报错）
    ├─ ARCHITECTURE.md                    # 架构、请求通道、状态机、下单时序
    ├─ ANDROID-PLAN.md                    # 安卓 App 改造方案（设计稿，未实现）
-   ├─ index.html                         # 架构图在线入口（GitHub Pages）
    ├─ diagrams/                          # 6 张自包含交互式架构图
    └─ images/                            # 截图（已打码）与图标
 ```

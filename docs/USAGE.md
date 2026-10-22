@@ -34,7 +34,8 @@
 **方式 A（推荐，可自动更新）**
 
 1. 浏览器安装 **Tampermonkey**（油猴）扩展。
-2. 点 **[一键安装脚本](https://raw.githubusercontent.com/black-mouse-sha/12306-ticket-assistant-pro/main/12306-ticket-assistant-pro.user.js)**，油猴会弹出安装页 → 点「安装」。
+2. 点 **[一键安装脚本](https://black-mouse-sha.github.io/12306-ticket-assistant-pro/12306-ticket-assistant-pro.user.js)**，油猴会弹出安装页 → 点「安装」。
+   （打不开的话，从 [GitHub 文件页](https://github.com/black-mouse-sha/12306-ticket-assistant-pro/blob/main/12306-ticket-assistant-pro.user.js) 点「Raw」安装。）
 3. 打开 **12306 → 车票 → 单程**（地址应是 `kyfw.12306.cn/otn/leftTicket/init`）。
    面板出现在右上角。
 4. 面板标题上的版本号应该是 **v3.3.5**。
