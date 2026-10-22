@@ -64,6 +64,8 @@
 
 > 截图中的姓名、账号已打码；界面以 v3.3.5 为准。
 
+> ⭐ 如果这个项目对你有帮助，欢迎点个 Star 支持作者：<https://github.com/black-mouse-sha/12306-ticket-assistant-pro>
+
 ## ⚡ 30 秒上手
 
 ### 1. 装油猴
@@ -248,7 +250,7 @@ https://kyfw.12306.cn/otn/leftTicket/init
 
 **LittlePerson** · [GitHub @black-mouse-sha](https://github.com/black-mouse-sha)
 
-如果这个项目帮你抢到了票，欢迎点一个 ⭐ Star；有问题可以开 [Issue](https://github.com/black-mouse-sha/12306-ticket-assistant-pro/issues)。
+如果这个项目帮你抢到了票，欢迎点一个 ⭐ Star；有问题可以开 [Issue](https://github.com/black-mouse-sha/12306-ticket-assistant-pro/issues) 或到 [Discussions](https://github.com/black-mouse-sha/12306-ticket-assistant-pro/discussions) 讨论。
 
 ## 二次开发说明
 

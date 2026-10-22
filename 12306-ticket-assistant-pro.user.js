@@ -16,8 +16,8 @@
 // @connect      kyfw.12306.cn
 // @connect      www.12306.cn
 // @license      MIT
+// @homepageURL  https://github.com/black-mouse-sha/12306-ticket-assistant-pro
 // ==/UserScript==
-
 (function () {
     'use strict';
 
