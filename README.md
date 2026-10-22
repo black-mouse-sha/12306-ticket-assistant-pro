@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/icon.png" width="96" alt="12306 抢票助手 Pro">
+  <img src="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/docs/images/icon.png" width="96" alt="12306 抢票助手 Pro">
 </p>
 
 <h1 align="center">12306 抢票助手 Pro</h1>
@@ -39,7 +39,7 @@
 
 | 桌面端：抢到票 | 手机端：开售 5 分钟售罄 |
 |:---:|:---:|
-| <img src="docs/images/desktop-success.png" width="720" alt="桌面端抢票成功截图"> | <img src="docs/images/mobile-soldout.jpg" width="250" alt="杭州到深圳开售五分钟售罄"> |
+| <img src="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/docs/images/desktop-success.png" width="720" alt="桌面端抢票成功截图"> | <img src="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/docs/images/mobile-soldout.jpg" width="250" alt="杭州到深圳开售五分钟售罄"> |
 | 面板挂在 12306 页面上，抢到后页面弹窗 + 系统通知 | 杭州 → 深圳 D3123，开售 5 分钟全部售罄——正是脚本要抢的场景 |
 
 > 两张图均为真实使用截图，涉及个人信息的区域已打码。
