@@ -55,6 +55,8 @@ Chrome / Edge / Firefox 都支持。
 
 油猴会弹出安装页，点「安装」即可。
 
+> 如果打开后只看到一堆代码、没有弹出安装页，说明油猴没装好；按下面的「手动安装」粘贴即可。
+
 > 这个链接由 GitHub Pages 提供，国内网络一般可以直接打开。
 > 如果打不开，打开 [GitHub 文件页](https://github.com/black-mouse-sha/12306-ticket-assistant-pro/blob/main/12306-ticket-assistant-pro.user.js)，点右上角的 **Raw** 按钮。
 
