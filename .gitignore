@@ -1,0 +1,9 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# 依赖 / 构建（本项目实际不需要）
+node_modules/
+dist/
