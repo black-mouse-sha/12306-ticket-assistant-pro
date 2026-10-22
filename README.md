@@ -22,6 +22,7 @@
 
 <p align="center">
   <a href="docs/USAGE.md">完整使用手册</a> ·
+  <a href="#三步界面">三步界面</a> ·
   <a href="docs/ARCHITECTURE.md">架构与实现</a> ·
   <a href="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/">在线架构图</a> ·
   <a href="#常见问题">常见问题</a>
@@ -43,6 +44,25 @@
 | 面板挂在 12306 页面上，抢到后页面弹窗 + 系统通知 | 杭州 → 深圳 D3123，开售 5 分钟全部售罄——正是脚本要抢的场景 |
 
 > 两张图均为真实使用截图，涉及个人信息的区域已打码。
+
+## 三步界面
+
+| ① 条件 | ② 方案 | ③ 抢票 |
+|:---:|:---:|:---:|
+| <img src="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/docs/images/ui-conditions.png" width="260" alt="条件面板：日期、站点、席别、乘车人"> | <img src="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/docs/images/ui-plans.png" width="260" alt="方案列表：真实车次、票价、余票、起售时间"> | <img src="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/docs/images/ui-reservation-running.png" width="260" alt="正在抢票：下一场开火倒计时"> |
+| 日期、站点、席别、乘车人；填一次自动保存 | 真实车次、票价、余票、起售时间；可勾选、删除、拖动排序 | 到点自动开火，显示下一场倒计时、服务器时间与运行状态 |
+
+<details>
+<summary>展开看：高级设置 / 预约设置 / 预约方案</summary>
+
+| 高级设置 | 预约设置 | 预约方案 |
+|:---:|:---:|:---:|
+| <img src="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/docs/images/ui-advanced.png" width="260" alt="高级设置：车厢图选座、同城车站、买长乘短"> | <img src="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/docs/images/ui-reservation.png" width="260" alt="预约设置：预售期外日期和开火时刻"> | <img src="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/docs/images/ui-reservation-plans.png" width="260" alt="预约方案：按开火时刻分组"> |
+| 车厢图选座、同城车站、买长乘短 | 预售期外的日期先设好，到点自动查票开火 | 预约方案带「预约」标签，按开火时刻分组 |
+
+</details>
+
+> 截图中的姓名、账号已打码；界面以 v3.3.5 为准。
 
 ## ⚡ 30 秒上手
 
@@ -221,7 +241,7 @@ https://kyfw.12306.cn/otn/leftTicket/init
 - **双通道请求层**：同源 `fetch` 与跨域 `GM_xmlhttpRequest` 自动切换，配合 `AbortController` 看门狗，解决 12306 边缘节点不回 OPTIONS 预检导致的「一直查询」。
 - **时间与节奏**：用响应头校准服务器时钟、按乘车站生成多个起售点、热窗口内自适应轮询、失败退避与熔断。
 - **可观测性**：面板日志 + 技术日志双轨，落盘可跨页面恢复，报错自动展开，一键复制。
-- **文档即交付物**：完整手册 + 6 张交互式架构图（节点标注源码行号）+ 安卓改造方案，图表与源码逐行对应。
+- **文档即交付物**：完整手册 + 6 张交互式架构图（节点标注源码行号）+ 6 张界面截图 + 安卓改造方案，图表与源码逐行对应。
 - **真实场景验证**：2026-10-17 在个人中心页面下出真实订单；2026-10-19 预约 11-02 杭州 → 深圳 D3123 并抢票成功（截图见上）。
 
 ## 作者

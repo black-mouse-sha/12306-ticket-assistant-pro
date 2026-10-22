@@ -2,6 +2,8 @@
 
 > 想先跑起来？看 [README 的 30 秒上手](../README.md)。本文是把每个按钮、每条报错都讲清楚的完整版。
 >
+> 界面截图：见 [README 的三步界面](../README.md#三步界面)。
+>
 > 项目主页：<https://github.com/black-mouse-sha/12306-ticket-assistant-pro>
 
 ## ⚠️ 只看域名：必须在 `kyfw.12306.cn` 下，任何页面都行
