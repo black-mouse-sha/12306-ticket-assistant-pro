@@ -37,7 +37,7 @@
 | <img src="docs/images/desktop-success.png" width="720" alt="桌面端抢票成功截图"> | <img src="docs/images/mobile-soldout.jpg" width="250" alt="杭州到深圳开售五分钟售罄"> |
 | 面板挂在 12306 页面上，抢到后页面弹窗 + 系统通知 | 杭州 → 深圳 D3123，开售 5 分钟全部售罄——正是脚本要抢的场景 |
 
-> 两张图均为真实使用截图，姓名、头像、订单号已打码。
+> 两张图均为真实使用截图，涉及个人信息的区域已打码。
 
 ## ⚡ 30 秒上手
 
@@ -108,7 +108,7 @@ https://kyfw.12306.cn/otn/leftTicket/init
 | 选座 | 靠窗 / 过道 / 挨着，也能直接在车厢图上点座位号 |
 | 同城车站 | 接受同城其它车站，避免「上海→杭州」漏掉虹桥/杭州东 |
 | 学生票 | 勾乘车人旁的「学」标记，自动带学生票参数 |
-| 静音车厢 | 支持静音车厢车次筛选 |
+| 静音车厢 | 车次支持时，可指定静音车厢 |
 | 提醒 | 页面弹窗 + 系统通知 + 声音；跨时段接力可保持唤醒 |
 | 日志 | 面板日志说人话，技术日志可一键复制；报错自动展开 |
 
@@ -121,8 +121,8 @@ https://kyfw.12306.cn/otn/leftTicket/init
    ↓
 按起售时刻排队 → 到点轮询余票
    ↓
-下单 5 步：submitOrderRequest → checkOrderInfo → getQueueCount
-           → confirmSingleForQueue → 跳转支付
+下单 5 步：submitOrderRequest → initDc（取 token）
+         → checkOrderInfo → getQueueCount → confirmSingleForQueue → 跳转支付
    ↓
 抢到：停止 / 弹窗 / 通知；中转：落盘接力状态，继续等第 2 段
 ```

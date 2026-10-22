@@ -31,7 +31,7 @@
 
 ## 安装
 
-**方式 A（推荐，可自动更新）**
+**方式 A（推荐，一键安装）**
 
 1. 浏览器安装 **Tampermonkey**（油猴）扩展。
 2. 点 **[一键安装脚本](https://black-mouse-sha.github.io/12306-ticket-assistant-pro/12306-ticket-assistant-pro.user.js)**，油猴会弹出安装页 → 点「安装」。
