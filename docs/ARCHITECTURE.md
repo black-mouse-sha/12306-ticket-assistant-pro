@@ -119,3 +119,7 @@
 - 2026-10-19：预约 11-02 杭州 → 深圳 D3123，开售 5 分钟售罄后抢票成功（截图见 README）。
 - 六张图由 Archify 3.2.0 渲染，均通过 validate / deliver / browser-check 检查；图中节点标注的源码行号与 v3.3.5 脚本逐行对应。
 - 本文与 README、USAGE、CHANGELOG 一起构成这个项目的「可维护性证据」：不只看功能，也看边界、失败路径和取舍。
+
+---
+
+作者：**LittlePerson** · 二次开发自 [辻弌20 的开源脚本](https://scriptcat.org/zh-CN/script-show-page/6106)（MIT License）

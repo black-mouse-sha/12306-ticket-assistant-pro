@@ -320,7 +320,11 @@ cd app-android ; .\gradlew.bat assembleDebug      # app-debug.apk，自签即可
 
 ## 14. 还需要拍板的（都不阻塞开工）
 
-1. App 名字 / 包名（默认：`抢票助手 Pro` / `com.littl.t12306pro`）
+1. App 名字 / 包名（默认：`抢票助手 Pro` / `com.littleperson.t12306pro`）
 2. 开屏落在哪个页面：车票查询页（推荐）/ 个人中心
 3. 是否要「导出/导入配置 JSON」（换手机方便，约 1 小时工作量）
 4. 热更新的托管地址（GitHub 还是你自己的服务器）
+
+---
+
+设计稿整理：**LittlePerson** · 二次开发自 [辻弌20 的开源脚本](https://scriptcat.org/zh-CN/script-show-page/6106)（MIT License）
