@@ -10,6 +10,11 @@
 </p>
 
 <p align="center">
+  作者：<a href="https://github.com/black-mouse-sha"><b>LittlePerson</b></a> ·
+  二次开发自 <a href="https://scriptcat.org/zh-CN/script-show-page/6106">辻弌20 的开源脚本</a>
+</p>
+
+<p align="center">
   <a href="https://black-mouse-sha.github.io/12306-ticket-assistant-pro/12306-ticket-assistant-pro.user.js"><img src="https://img.shields.io/badge/%E2%9A%A1%20%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85-3.3.5-2f6fed?style=for-the-badge" alt="一键安装"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-43d19e?style=for-the-badge" alt="MIT License"></a>
   <a href="https://www.tampermonkey.net/"><img src="https://img.shields.io/badge/Tampermonkey-%E6%B2%B9%E7%8C%B4-orange?style=for-the-badge" alt="Tampermonkey"></a>
@@ -212,7 +217,7 @@ https://kyfw.12306.cn/otn/leftTicket/init
 ## 工程笔记（给面试官 / 维护者）
 
 - **单文件、零依赖**：约 4,700 行原生 JavaScript，没有框架、没有打包步骤，`Ctrl+S` 就能改。
-- **一次有边界的重构**：从上游 v2.1.17 的单一定时、整条联程链路，改成「三步界面 + 多起售点 + 中转两段接力 + 状态落盘」，并删掉了维护成本最高的联程链路。
+- **一次有边界的重构**：从参考项目 v2.1.17 的单一定时、整条联程链路，改成「三步界面 + 多起售点 + 中转两段接力 + 状态落盘」，并删掉了维护成本最高的联程链路。
 - **双通道请求层**：同源 `fetch` 与跨域 `GM_xmlhttpRequest` 自动切换，配合 `AbortController` 看门狗，解决 12306 边缘节点不回 OPTIONS 预检导致的「一直查询」。
 - **时间与节奏**：用响应头校准服务器时钟、按乘车站生成多个起售点、热窗口内自适应轮询、失败退避与熔断。
 - **可观测性**：面板日志 + 技术日志双轨，落盘可跨页面恢复，报错自动展开，一键复制。
@@ -225,10 +230,11 @@ https://kyfw.12306.cn/otn/leftTicket/init
 
 如果这个项目帮你抢到了票，欢迎点一个 ⭐ Star；有问题可以开 [Issue](https://github.com/black-mouse-sha/12306-ticket-assistant-pro/issues)。
 
-## 致谢
+## 二次开发说明
 
-- 原版脚本：[12306 抢票助手 Pro v2.1.17](https://scriptcat.org/zh-CN/script-show-page/6106)，作者 **辻弌20**，MIT License。
-- 本项目基于原版重构 v3 系列，保留原作者的 MIT 许可与署名。
+本项目由 **LittlePerson** 二次开发与维护：参考 [辻弌20 的开源脚本「12306 抢票助手 Pro v2.1.17」](https://scriptcat.org/zh-CN/script-show-page/6106)（MIT License），在其基础上重构了 v3 的三步界面、多起售点、中转接力、请求通道、状态落盘，并补齐文档与架构图。
+
+原项目的 MIT 版权声明保留在 [LICENSE](LICENSE) 中，特此致谢。
 
 ## 免责声明
 
@@ -238,4 +244,4 @@ https://kyfw.12306.cn/otn/leftTicket/init
 
 ## License
 
-[MIT](LICENSE) © 2026 辻弌20（原版）· LittlePerson（v3 重构与文档）
+[MIT](LICENSE) © 2026 LittlePerson（二次开发、文档、架构图）· 部分代码参考 辻弌20（MIT）

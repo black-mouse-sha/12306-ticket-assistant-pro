@@ -4684,9 +4684,10 @@
 })();
 
 // ---------------------------------------------------------------------------
-// 来源说明（不参与执行）
-//   原版：12306 抢票助手 Pro v2.1.17，作者 辻弌20，MIT License
-//          https://scriptcat.org/zh-CN/script-show-page/6106
-//   v3.0 ~ v3.3.5：由 LittlePerson 重构与维护。
+// 作者：LittlePerson
+// 二次开发说明（不参与执行）：
+//   本项目参考 辻弌20 的开源脚本「12306 抢票助手 Pro v2.1.17」
+//   （MIT License，https://scriptcat.org/zh-CN/script-show-page/6106），
+//   在其基础上完成 v3.0 ~ v3.3.5 的重构与维护。
 //   改动清单与设计说明见 README.md、docs/CHANGELOG.md、docs/ARCHITECTURE.md。
 // ---------------------------------------------------------------------------
